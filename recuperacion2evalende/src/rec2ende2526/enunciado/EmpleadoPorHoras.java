@@ -17,5 +17,11 @@ public class EmpleadoPorHoras extends EmpleadoTiempoCompleto{
 			salarioNeto = salarioBruto - (salarioBruto*0.07);
 		}
 	}
+	public void calcularSalarioBruto(double comisionesEmpleadoMes) {
+		double salarioBruto = salarioBase + comisionesEmpleadoMes;
+		if(comisionesEmpleadoMes>0) {
+			throw new IllegalArgumentException("la comisión no puede ser negativa");
+		}
+	}
 
 }
