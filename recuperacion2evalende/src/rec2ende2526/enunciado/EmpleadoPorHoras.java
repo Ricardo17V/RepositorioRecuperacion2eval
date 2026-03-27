@@ -23,5 +23,14 @@ public class EmpleadoPorHoras extends EmpleadoTiempoCompleto{
 			throw new IllegalArgumentException("la comisión no puede ser negativa");
 		}
 	}
-
+	public void calcularSalarioNeto(double comisionesEmpleadoMes) {
+		double salarioNeto = 0;
+		double salarioBruto = 0;
+		if(autonomo = true) {
+			salarioNeto = salarioBruto - (salarioBruto*comisionesEmpleadoMes);
+		}
+		else {
+			salarioNeto = salarioBruto - (salarioBruto*0.07);
+		}
+	}
 }
