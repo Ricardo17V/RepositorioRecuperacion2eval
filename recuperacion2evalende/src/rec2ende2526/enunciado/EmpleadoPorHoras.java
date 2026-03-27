@@ -1,0 +1,21 @@
+package rec2ende2526.enunciado;
+
+public class EmpleadoPorHoras extends EmpleadoTiempoCompleto{
+
+	public EmpleadoPorHoras(String nombre, double salarioBase, Boolean autonomo, float irpf) {
+		super(nombre, salarioBase, autonomo, irpf);
+		
+	}
+	@Override
+	public void calcularSalarioNeto() {
+		double salarioBruto = 0;
+		double salarioNeto = 0;
+		if(autonomo == false) {
+		salarioNeto = salarioBruto - (salarioBruto * irpf);
+		}
+		else {
+			salarioNeto = salarioBruto - (salarioBruto*0.07);
+		}
+	}
+
+}
