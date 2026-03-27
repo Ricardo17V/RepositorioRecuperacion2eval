@@ -58,6 +58,18 @@ public abstract class Empleado {
 	}
 	public void calcularSalarioBruto(double pagaExtra, int numMeses) {
 		double salarioBruto = salarioBase + (pagaExtra/numMeses);
+		if(pagaExtra<0) {
+			throw new IllegalArgumentException("La paga extra no puede ser negativa");
+		}
+		else {
+			
+		}
+		if(numMeses<1 || numMeses>12) {
+			throw new IllegalArgumentException("Los meses deben estar entre el 1 y el 12");
+		}
+		else {
+			
+		}
 	}
 	public abstract double calcularSalarioNeto();
 }
